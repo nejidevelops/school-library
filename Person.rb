@@ -7,7 +7,6 @@ class Person
   end
 
   attr_reader :id, :name, :age
-  attr_accessor :name, :age
 
   def name=(new_name)
     @name = new_name
@@ -16,8 +15,6 @@ class Person
   def age=(new_age)
     @age = new_age
   end
-
-  public
 
   def can_use_services?
     of_age? || @parent_permission

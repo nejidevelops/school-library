@@ -1,5 +1,5 @@
 class Person
-  def initialize(id, name: "Unknown", age:, parent_permission: true)
+  def initialize(id, age:, name: 'Unknown', parent_permission: true)
     @id = id
     @name = name
     @age = age
@@ -7,14 +7,6 @@ class Person
   end
 
   attr_reader :id, :name, :age
-
-  def name=(new_name)
-    @name = new_name
-  end
-
-  def age=(new_age)
-    @age = new_age
-  end
 
   def can_use_services?
     of_age? || @parent_permission
@@ -27,7 +19,7 @@ class Person
   end
 end
 
-person = Person.new(1, name: "Fatuma", age: 24)
+person = Person.new(1, name: 'Fatuma', age: 24)
 puts person.name
 puts person.age
 puts person.can_use_services?
